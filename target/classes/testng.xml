@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group Test Suite" verbose="1">
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+    <test name="Group Test" >
+        <groups>
+
+            <define name = "all">
+                <include name = "basic"/>
+            </define>
+
+            <run>
+                <include name = "all"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name = "CheckCityPopupTest" />
+        </classes>
+    </test>
+</suite>
